@@ -13,5 +13,12 @@ Faça um Programa que peça dois números inteiros e imprima a soma.
 """
 
 
+from ctypes.wintypes import PINT
+
+
 def imprima_a_soma_de_dois_numeros():
     """Escreva aqui em baixo a sua solução"""
+    numero1= int(input("Digite um número: "))
+    numero2= int(input("Digite o segundo número: "))
+    soma= numero1 + numero2
+    print("A soma dos dois números informados é",soma)
