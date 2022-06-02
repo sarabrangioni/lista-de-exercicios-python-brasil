@@ -19,7 +19,7 @@ def positivo_ou_negativo(n):
     """Escreva aqui em baixo a sua solução"""
     if n > 0:
         print("'positivo'")
-    elif n = 0:
+    elif n == 0:
         print("'não tem positivo'")
     else:
         print("'negativo'")
