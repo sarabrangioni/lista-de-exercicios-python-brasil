@@ -37,5 +37,5 @@ def calcular_assalto_no_salario():
     print(f"+ Salário Bruto : {salário:.2f}")
     print(f"- IR (11%) : R$ {ir:.2f}")
     print(f"- INSS (8%) : R$ {inss:.2f}")
-    print(f"- Sindicato ( 5%) : R$ {sindicato:.2f}")
+    print(f"- Sindicato ( 5%) : R$g {sindicato:.2f}")
     print(f"= Salário Liquido : R$ {salárioliq:.2f}")
