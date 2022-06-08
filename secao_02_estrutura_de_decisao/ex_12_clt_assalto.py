@@ -53,3 +53,41 @@ até R$ 99999,99
 
 def calcular_salario_liquido(valor_hora: float, horas_trabalhadas: int):
     """Escreva aqui em baixo a sua solução"""
+    salario= valor_hora*horas_trabalhadas
+    inss=salario*0.10
+    sindicato=salario*0.03
+    fgts=salario*0.11
+    desconto=inss+sindicato
+    saliq=salario-desconto
+    if salario <= 900:
+      print(f'''Salário Bruto: (R$ {"%.2f" %(valor_hora)} * {(horas_trabalhadas)})     : R$   {"%.2f" %salario}
+(-) IR (0%)                        : R${("%.2f" %(0.00)).rjust(9)}
+(-) INSS (10%)                     : R${("%.2f" %(inss)).rjust(9)}
+(-) Sindicato (3%)                 : R${("%.2f" %(sindicato)).rjust(9)}
+FGTS (11%)                         : R${("%.2f" %(fgts)).rjust(9)}
+Total de descontos                 : R${("%.2f" %(desconto)).rjust(9)}
+Salário Liquido                    : R${("%.2f" %(saliq)).rjust(9)}''')
+    elif salario >= 900 and salario <= 1500:
+      print(f'''Salário Bruto: (R$ {"%.2f" %(valor_hora)} * {(horas_trabalhadas)})     : R$  {"%.2f" %salario}
+(-) IR (5%)                        : R${("%.2f" %(salario*0.05)).rjust(9)}
+(-) INSS (10%)                     : R${("%.2f" %(inss)).rjust(9)}
+(-) Sindicato (3%)                 : R${("%.2f" %(sindicato)).rjust(9)}
+FGTS (11%)                         : R${("%.2f" %(fgts)).rjust(9)}
+Total de descontos                 : R${("%.2f" %(desconto+(salario*0.05))).rjust(9)}
+Salário Liquido                    : R${("%.2f" %(saliq-(salario*0.05))).rjust(9)}''')
+    elif salario >= 1500 and salario <= 2500:
+      print(f'''Salário Bruto: (R$ {"%.2f" %(valor_hora)} * {(horas_trabalhadas)})    : R$  {"%.2f" %salario}
+(-) IR (10%)                       : R${("%.2f" %(salario*0.10)).rjust(9)}
+(-) INSS (10%)                     : R${("%.2f" %(inss)).rjust(9)}
+(-) Sindicato (3%)                 : R${("%.2f" %(sindicato)).rjust(9)}
+FGTS (11%)                         : R${("%.2f" %(fgts)).rjust(9)}
+Total de descontos                 : R${("%.2f" %(desconto+(salario*0.10))).rjust(9)}
+Salário Liquido                    : R${("%.2f" %(saliq-(salario*0.10))).rjust(9)}''')
+    else:
+      print(f'''Salário Bruto: (R$ {"%.2f" %(valor_hora)} * {(horas_trabalhadas)})   : R$ {"%.2f" %salario}
+(-) IR (20%)                       : R${("%.2f" %(salario*0.20)).rjust(9)}
+(-) INSS (10%)                     : R${("%.2f" %(inss)).rjust(9)}
+(-) Sindicato (3%)                 : R${("%.2f" %(sindicato)).rjust(9)}
+FGTS (11%)                         : R${("%.2f" %(fgts)).rjust(9)}
+Total de descontos                 : R${("%.2f" %(desconto+(salario*0.20))).rjust(9)}
+Salário Liquido                    : R${("%.2f" %(saliq-(salario*0.20))).rjust(9)}''')
