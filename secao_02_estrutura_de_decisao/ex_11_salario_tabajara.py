@@ -37,7 +37,49 @@ Mostrar valores monetários com duas casas decimais.
     Novo salário: R$ 1680.00
 
 """
-
-
-def calcular_aumento(salario: float):
-    """Escreva aqui em baixo a sua solução"""
+def validar_data(data: str):
+    """Escreva aqui em baixo a sua soluçãodia = int(data[0:2])"""
+    data_splitada = (data.split('/'))
+    if len(data_splitada) == 3:
+        dia = int(data_splitada[0])
+        mes = int(data_splitada[1])
+        ano = int(data_splitada[2])
+        if mes== 1 and dia >0 and dia < 32:
+          print("'Data válida'")
+            #feve
+        elif mes== 2 and dia >0 and dia <=29:
+          print("'Data válida'")
+            #mar
+        elif mes== 3 and dia >0 and dia <32:
+          print("'Data válida'")
+            #abr
+        elif mes==4 and dia >0 and dia <31:
+          print("'Data válida'")
+            #mai
+        elif mes==5 and dia > 0 and dia <32:
+          print("'Data válida'")
+            #jun
+        elif mes==6 and dia > 0 and dia <31:
+          print("'Data válida'")
+            #jul
+        elif mes==7 and dia > 0 and dia <32:
+          print("'Data válida'")
+            #ago
+        elif mes== 8 and dia > 0 and dia <31:
+          print("'Data válida'")
+            #set
+        elif mes==9 and dia > 0 and dia <31:
+          print("'Data válida'")
+            #out
+        elif mes== 10 and dia >0 and dia <32:
+          print("'Data válida'")
+            #nov
+        elif mes == 11 and dia > 0 and dia < 31:
+          print("'Data válida'")
+            #dez
+        elif mes == 12 and dia> 0 and dia <32:
+          print("'Data válida'")
+        else:
+          print("'Data inválida'")
+    else:
+      print("'Data inválida'")
