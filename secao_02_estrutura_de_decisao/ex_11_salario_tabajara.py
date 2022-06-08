@@ -37,49 +37,30 @@ Mostrar valores monetários com duas casas decimais.
     Novo salário: R$ 1680.00
 
 """
-def validar_data(data: str):
-    """Escreva aqui em baixo a sua soluçãodia = int(data[0:2])"""
-    data_splitada = (data.split('/'))
-    if len(data_splitada) == 3:
-        dia = int(data_splitada[0])
-        mes = int(data_splitada[1])
-        ano = int(data_splitada[2])
-        if mes== 1 and dia >0 and dia < 32:
-          print("'Data válida'")
-            #feve
-        elif mes== 2 and dia >0 and dia <=29:
-          print("'Data válida'")
-            #mar
-        elif mes== 3 and dia >0 and dia <32:
-          print("'Data válida'")
-            #abr
-        elif mes==4 and dia >0 and dia <31:
-          print("'Data válida'")
-            #mai
-        elif mes==5 and dia > 0 and dia <32:
-          print("'Data válida'")
-            #jun
-        elif mes==6 and dia > 0 and dia <31:
-          print("'Data válida'")
-            #jul
-        elif mes==7 and dia > 0 and dia <32:
-          print("'Data válida'")
-            #ago
-        elif mes== 8 and dia > 0 and dia <31:
-          print("'Data válida'")
-            #set
-        elif mes==9 and dia > 0 and dia <31:
-          print("'Data válida'")
-            #out
-        elif mes== 10 and dia >0 and dia <32:
-          print("'Data válida'")
-            #nov
-        elif mes == 11 and dia > 0 and dia < 31:
-          print("'Data válida'")
-            #dez
-        elif mes == 12 and dia> 0 and dia <32:
-          print("'Data válida'")
-        else:
-          print("'Data inválida'")
+
+
+def calcular_aumento(salario: float):
+    """Escreva aqui em baixo a sua solução"""
+    reajp = ''
+    reajv = 0
+    salarior = 0
+    if salario <= 280:
+      salarior = ((salario/100)*20) + salario
+      reajp = '20%'
+      reajv = (salario/100)*20
+    elif salario > 280 and salario <= 700:
+      salarior = salario + (salario/100)*15
+      reajp= '15%'
+      reajv = (salario/100)*15
+    elif salario > 700 and salario <= 1500:
+      salarior = salario + (salario/100)*10
+      reajp= '10%'
+      reajv = (salario/100)*10
     else:
-      print("'Data inválida'")
+      salarior = salario + (salario * 0.05)
+      reajp= '5%'
+      reajv = (salario/100)*5
+    print(f'Salário atual: R$ {salario:.2f}')
+    print(f'Aumento porcentual: {reajp}')
+    print(f'Valor do aumento: R$ {reajv:.2f}')
+    print(f'Novo salário: R$ {salarior:.2f}')
