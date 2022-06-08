@@ -30,8 +30,27 @@ Mostre o restultado com duas casas decimais
     >>> calcular_abastecimento(30, 'G')
     '30 litro(s) de gasolina custa(m): R$ 75.00. Com 6% de desconto, fica R$ 70.50'
 
-"""
+""" 
 
 
 def calcular_abastecimento(litros_de_combustivel: float, tipo_de_combustivel: str) -> str:
     """Escreva aqui em baixo a sua solução"""
+    #  alcool
+
+    alcool_preco = litros_de_combustivel * 1.90
+    if tipo_de_combustivel == 'A' and litros_de_combustivel <= 20:
+        alcool_desconto = alcool_preco - (alcool_preco * 0.03)
+        print (f"'{litros_de_combustivel} litro(s) de álcool custa(m): R$ {alcool_preco:.2f}. Com 3% de desconto, fica R$ {alcool_desconto}'")
+
+    elif tipo_de_combustivel == 'A' and litros_de_combustivel > 20:
+        alcool_desconto = alcool_preco - (alcool_preco * 0.05)
+        print (f"'{litros_de_combustivel} litro(s) de álcool custa(m): R$ {alcool_preco:.2f}. Com 5% de desconto, fica R$ {alcool_desconto}'")
+
+    # gasolina
+    gasolina_preco = litros_de_combustivel * 2.50
+    if tipo_de_combustivel == 'G' and litros_de_combustivel <= 20:
+        gasolina_desconto = gasolina_preco - (gasolina_preco * 0.04)
+        print (f"'{litros_de_combustivel} litro(s) de gasolina custa(m): R$ {gasolina_preco:.2f}. Com 4% de desconto, fica R$ {gasolina_desconto:.2f}'")
+    elif tipo_de_combustivel == 'G' and litros_de_combustivel > 20:
+        gasolina_desconto = gasolina_preco - (gasolina_preco * 0.06)
+        print (f"'{litros_de_combustivel} litro(s) de gasolina custa(m): R$ {gasolina_preco:.2f}. Com 6% de desconto, fica R$ {gasolina_desconto:.2f}'")
