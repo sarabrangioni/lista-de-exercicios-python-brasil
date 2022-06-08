@@ -50,5 +50,65 @@ Observando os termos no plural a colocação do "e", da vírgula entre outros. E
 """
 
 
+from math import floor
+
+
 def decompor_numero(numero: int):
     """Escreva aqui em baixo a sua solução"""
+
+    resto_c= numero % 100
+    resto_dez= resto_c % 10
+    uni= int(resto_dez / 1)
+
+    dez= int(numero /10)
+    cen = int(numero/100)
+    dezena = int(floor((numero % 100) /10))
+## Unidades
+    if numero < 10:
+        if numero == 1 :
+            print (f"'{numero} = {uni} unidade'")
+        elif numero < 0:
+            print("'O número precisa ser positivo'")
+        else:
+            print (f"'{numero} = {uni} unidades'")
+#####################################################
+
+## Dezenas
+    if numero >= 10 and numero <= 99:
+        if uni==0 and dez > 1:
+            print(f"'{numero} = {dez} dezenas'")
+        elif uni==0:
+            print(f"'{numero} = {dez} dezena'")
+        elif uni==1:
+            print(f"'{numero} = {dez} dezenas e {uni} unidade'")
+        elif dez ==1:
+            print(f"'{numero} = {dez} dezena e {uni} unidades'")
+        else:
+            print(f"'{numero} = {dez} dezenas e {uni} unidades'")
+####################################################
+
+## Centenas
+    if numero >= 100:
+                    #1000
+        if numero >999:
+            print(f"'O número precisa ser menor que 1000'")
+        elif cen > 1 and dezena >1 and uni > 1:
+         print(f"'{numero} = {cen} centenas, {dezena} dezenas e {uni} unidades'")
+        elif cen==1 and dezena == 0 and uni == 0:
+            print(f"'{numero} = {cen} centena'")
+        elif cen>1 and dezena == 0 and uni == 0:
+            print(f"'{numero} = {cen} centenas'")
+        elif cen>1 and dezena==0 and uni>1:
+            print(f"'{numero} = {cen} centenas e {uni} unidades'")
+        elif cen>1 and dezena > 1 and uni == 0:
+            print(f"'{numero} = {cen} centenas e {dezena} dezenas'")
+        elif cen >1 and dezena == 1 and uni ==0 :
+            print(f"'{numero} = {cen} centenas e {dezena} dezena'")
+        elif cen > 1 and dezena == 0 and uni ==1:
+            print(f"'{numero} = {cen} centenas e {uni} unidade'")
+        elif cen== 1 and dezena == 0 and uni == 1:
+            print(f"'{numero} = {cen} centena e {uni} unidade'")
+        elif cen > 1 and dezena == 1 and uni == 1:
+            print(f"'{numero} = {cen} centenas, {dezena} dezena e {uni} unidade'")
+        elif cen == 1 and dezena == 1 and uni == 1:
+            print(f"'{numero} = {cen} centena, {dezena} dezena e {uni} unidade'")
