@@ -16,3 +16,11 @@ de crescimento.
 
 def calcular_ano_ultrapassagem_populacional() -> str:
     """Escreva aqui em baixo a sua solução"""
+    a = 80000
+    b = 200000
+    ano = 0
+    while a <= b:
+       a += a * 0.03
+       b += b * 0.015
+       ano += 1
+    print (f"'População de A, depois de {ano} ano(s) será de {a:.0f} pessoas, superando a de B, que será de {b:.0f} pessoas'" )
