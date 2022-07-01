@@ -48,6 +48,7 @@ Mostre os valores com uma casa decimal sem arredondar.
 
 def calcular_estatiscas_do_salto(nome, *saltos):
     """Escreva aqui em baixo a sua solução"""
+
     saltos = [*saltos]
     melhor_salto = max(saltos)
     pior_salto = min(saltos)
@@ -66,3 +67,4 @@ def calcular_estatiscas_do_salto(nome, *saltos):
     print('---------------------------------')
     print(f'Resultado final:')
     print(f'{nome}: {salto_media:.1f} m')
+

@@ -55,6 +55,7 @@ da média das alturas e dos pesos dos clientes
 
 
 def rodar_senso():
+
     """ """
     cadastro = obter_input()
  
@@ -79,3 +80,4 @@ def rodar_senso():
        salario = (salario * (1 + aumento_percentual))
        print(f'Salário em {ano}: R$ {salario:.2f}. Aumento porcentual: {(aumento_percentual * 100):.2f}%')
        aumento_percentual *= 2
+

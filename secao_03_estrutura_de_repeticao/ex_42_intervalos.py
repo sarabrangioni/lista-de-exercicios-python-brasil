@@ -40,6 +40,7 @@ A entrada de dados deverá terminar quando for lido um número negativo.
 
 def listar_numeros_para_avaliacao():
     """Escreva aqui em baixo a sua solução"""
+
     listaate25 = 0
     listaate50 = 0
     listaate75 = 0
@@ -64,3 +65,4 @@ def listar_numeros_para_avaliacao():
        print(f'{listaate75} número(s) entre o intervalo de 51 a 75')
     if listaate100 > 0:
        print(f'{listaate100} número(s) entre o intervalo de 76 a 100')
+

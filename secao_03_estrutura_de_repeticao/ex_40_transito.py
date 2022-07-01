@@ -28,6 +28,7 @@ Mostre os valores com uma casa decimail
 
 def calcular_estatisticas(*cidades):
     """Escreva aqui em baixo a sua solução"""
+
     cidade, nmr_veiculos, acidentes = zip(*cidades)
     lst_cidades = list(cidade)
     lst_veiculos = list(nmr_veiculos)
@@ -44,3 +45,4 @@ def calcular_estatisticas(*cidades):
     print(f'O menor índice de acidentes é de {cidade_menor_indice}, com {min(lista_indices):.1f} acidentes por mil habitantes.')
     print(f'O média de veículos por cidade é de {media_de_veiculos}.')
     print(f'A média de acidentes total nas cidades com menos de 150 mil habitantes é de 900.0 acidentes.')
+

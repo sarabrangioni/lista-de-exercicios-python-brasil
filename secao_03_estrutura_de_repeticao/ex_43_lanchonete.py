@@ -109,6 +109,7 @@ comprados.
 
 def fechar_conta(*itens):
     """Escreva aqui em baixo a sua solução"""
+
     valor_total = 0
     quantidade_total = 0
     quantidade_dic = {'100':0,'101':0,'102':0,'103':0,'104':0,'105':0}
@@ -132,3 +133,4 @@ def fechar_conta(*itens):
     print(f"|{'-'*75}|")
     print('| Total Geral:'.ljust(49), f'|{quantidade_total:>11} |{valor_total:>11.2f} |')
     print('-' * 77)
+

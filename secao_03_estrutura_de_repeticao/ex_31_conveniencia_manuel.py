@@ -56,6 +56,7 @@ para registrar a próxima compra.
 
 def rodar_programa_de_caixa():
     """Escreva aqui em baixo a sua solução"""
+
     i = 0
     total = 0
     dinheiro = 0
@@ -86,3 +87,4 @@ def rodar_programa_de_caixa():
            else:
                total += valor_produto
     print(f'Programa encerrado!')
+

@@ -38,6 +38,7 @@ Faça um programa que mostre os n termos da Série a seguir:
 
 def imprimir_serie(n):
     """Escreva aqui em baixo a sua solução"""
+
     numerador = 1
     denominador = 1
     soma = 0
@@ -53,3 +54,4 @@ def imprimir_serie(n):
        denominador+=2
        n-=1
     print(f'soma = {soma}')
+

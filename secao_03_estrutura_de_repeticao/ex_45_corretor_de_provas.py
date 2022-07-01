@@ -49,6 +49,7 @@ Gabarito da Prova:
 
 def corrigir(*provas):
     """Escreva aqui em baixo a sua solução"""
+
     print('Aluno                 Nota')
     gabarito = ['Gabarito', 'A', 'B', 'C', 'D', 'E', 'E', 'D', 'C', 'B', 'A']
     soma = 0
@@ -87,3 +88,4 @@ def corrigir(*provas):
     print(f'Maior nota: {max(notas)}')
     print(f'Menor nota: {min(notas)}')
     print(f'Total de Alunos: {len(provas)}')
+
