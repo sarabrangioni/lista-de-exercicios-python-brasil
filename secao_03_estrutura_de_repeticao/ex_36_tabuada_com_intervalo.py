@@ -39,3 +39,14 @@ Obs: Você deve verificar se o usuário não digitou o final menor que o inicial
 
 def gerar_tabuada(n: int, de: int, ate: int):
     """Escreva aqui em baixo a sua solução"""
+
+    i = de -1
+    if de < ate:
+       while i < ate:
+           resultado = n * de
+           de = de + 1
+           i = i + 1
+           print (f"{n} X {i} = {resultado}")
+    else:
+           print(f'O limite final ({ate}) deve ser maior que o inicial ({de})')
+

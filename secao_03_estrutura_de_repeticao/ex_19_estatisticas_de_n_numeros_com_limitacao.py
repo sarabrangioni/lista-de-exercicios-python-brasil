@@ -24,3 +24,22 @@ Altere o programa anterior para que ele aceite apenas números entre 0 e 1000.
 
 def calcular_estatisticas(*numeros) -> str:
     """Escreva aqui em baixo a sua solução"""
+    if len(numeros) == 0:
+       print("'Maior valor: não existe. Menor valor: não existe. Soma: 0'")
+       return
+ 
+    for n in numeros:
+       if n < 0 or n > 1000:
+           print("'Somente números de 0 a 1000 são permitidos'")
+           return
+ 
+    soma = 0
+    maior = numeros[0]
+    menor = 2
+    for n in numeros:
+       if n > maior:
+           maior = n
+       elif n < menor:
+           menor = n
+       soma += n
+    print(f"'Maior valor: {maior}. Menor valor: {menor}. Soma: {soma}'")

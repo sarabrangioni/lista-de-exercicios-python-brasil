@@ -30,3 +30,14 @@ Faça um programa que calcule o valor de H com N termos.
 
 def soma_serie(n):
     """Escreva aqui em baixo a sua solução"""
+
+    numerador = 1
+    denominador = 1
+    aga = 0
+    while n>0:
+       valor = numerador/denominador
+       aga+=valor
+       denominador+=1
+       n-=1
+    print(f'H = {aga}')
+

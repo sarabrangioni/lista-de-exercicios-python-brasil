@@ -55,4 +55,29 @@ da média das alturas e dos pesos dos clientes
 
 
 def rodar_senso():
-    """Escreva aqui em baixo a sua solução"""
+
+    """ """
+    cadastro = obter_input()
+ 
+    resultado = descobre_mais_alto_e_baixo(cadastro)
+    nome_do_mais_alto, mais_alto, nome_do_mais_baixo, mais_baixo = resultado
+ 
+    resultado = descobre_mais_magro_gordo(cadastro)
+    nome_do_mais_magro, mais_magro, nome_do_mais_gordo, mais_gordo = resultado
+ 
+    media_altura, media_peso = descobrir_medias_de_altura_e_peso(cadastro)
+ 
+    print(f"Cliente mais alto: {nome_do_mais_alto}, com {mais_alto} centímetros")
+    print(f"Cliente mais baixo: {nome_do_mais_baixo}, com {mais_baixo} centímetros")
+    print(f"Cliente mais magro: {nome_do_mais_magro}, com {mais_magro} kilos")
+    print(f"Cliente mais gordo: {nome_do_mais_gordo}, com {mais_gordo} kilos")
+    print("--------------------------------------------------")
+    print(f"Media de altura dos clientes: {media_altura:.1f} centímetros")
+    print(f"Media de peso dos clientes: {media_peso:.1f} kilos")
+    print(f'Salário em 2018: R$ {salario:.2f}')
+    aumento_percentual = 0.015
+    for ano in range (2019,2024):
+       salario = (salario * (1 + aumento_percentual))
+       print(f'Salário em {ano}: R$ {salario:.2f}. Aumento porcentual: {(aumento_percentual * 100):.2f}%')
+       aumento_percentual *= 2
+
